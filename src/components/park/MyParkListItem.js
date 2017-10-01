@@ -22,6 +22,7 @@ class MyParkListItem extends Component {
 
     const info = ((park) => {
       if(!park.showInfo) {
+        console.log(park)
         return null
       }
       else {
@@ -29,7 +30,7 @@ class MyParkListItem extends Component {
       }
     })
 
-    const parksList = this.props.parks.map((park, index) => {
+    const parksList = this.props.myParks.map((park, index) => {
       return parksItemsLayout(park, index)
     })
 
