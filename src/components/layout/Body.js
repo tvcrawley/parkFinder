@@ -15,7 +15,7 @@ class Body extends Component {
     }
     this.handleParkClick = this.handleParkClick.bind(this)
     this.handleHasVisitedChange = this.handleHasVisitedChange.bind(this)
-    this.handleParkItemClick = this.handleParkItemClick.bind(this)
+    this.handleParkItemDelete = this.handleParkItemDelete.bind(this)
   }
 
   handleParkClick (index) {
@@ -44,6 +44,13 @@ class Body extends Component {
     this.setState({myParks: myParksCopy})
   }
 
+  handleParkItemDelete (index) {
+    const myParksCopy = this.state.myParks.slice()
+    myParksCopy.splice(index, 1)
+    this.setState({myParks: myParksCopy})
+    console.log(this.state.myParks)
+  }
+
   render() {
 
     return (
@@ -53,6 +60,7 @@ class Body extends Component {
           myParks={this.state.myParks}
           onHasVisitedChange={this.handleHasVisitedChange}
           onParkItemClick={this.handleParkItemClick}
+          onParkItemDelete={this.handleParkItemDelete}
         />
       </div>
     );

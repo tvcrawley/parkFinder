@@ -16,6 +16,7 @@ class MyParkListItem extends Component {
         <input name={park.name} type="checkbox" checked={park.hasVisited}
           onChange={() => this.props.onHasVisitedChange(index)}/>
         <a href="#" onClick={() => this.props.onParkItemClick(index)}>{park.name}</a>
+        <span onClick={() => this.props.onParkItemDelete(index)}>X</span>
         {info(park)}
       </li>
     )

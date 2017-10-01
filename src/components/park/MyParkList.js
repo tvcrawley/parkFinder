@@ -16,6 +16,7 @@ class MyParkList extends Component {
             myParks={this.props.myParks}
             onHasVisitedChange={this.props.onHasVisitedChange}
             onParkItemClick={this.props.onParkItemClick}
+            onParkItemDelete={this.props.onParkItemDelete}
           />
         </ul>
       </div>
