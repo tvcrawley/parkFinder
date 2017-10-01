@@ -15,6 +15,7 @@ class Body extends Component {
     }
     this.handleParkClick = this.handleParkClick.bind(this)
     this.handleHasVisitedChange = this.handleHasVisitedChange.bind(this)
+    this.handleParkItemClick = this.handleParkItemClick.bind(this)
     this.handleParkItemDelete = this.handleParkItemDelete.bind(this)
   }
 
