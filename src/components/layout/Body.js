@@ -19,9 +19,11 @@ class Body extends Component {
   }
 
   handleParkClick (index) {
-    this.setState({
-      myParks: this.state.myParks.concat([this.state.parks[index]])
-    })
+    if(this.state.myParks.indexOf(this.state.myParks[index]) === -1) {
+      this.setState({
+        myParks: this.state.myParks.concat([this.state.parks[index]])
+      })
+    }
     console.log(this.state.myParks)
   }
 
