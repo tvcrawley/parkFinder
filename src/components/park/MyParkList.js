@@ -6,12 +6,13 @@ class MyParkList extends Component {
     super(props)
     this.state = {
       parks: [
-        {name:'State Park 1', hasVisited: false},
-        {name:'State Park 2', hasVisited: false},
-        {name:'State Park 3', hasVisited: false}
+        {name:'State Park 1', hasVisited: false, location: 'Maryland', showInfo: false},
+        {name:'State Park 2', hasVisited: false, location: 'Pennsylvania', showInfo: false},
+        {name:'State Park 3', hasVisited: false, location: 'Massachusetts', showInfo: false}
       ]
     }
     this.handleHasVisitedChange = this.handleHasVisitedChange.bind(this)
+    this.handleParkItemClick = this.handleParkItemClick.bind(this)
   }
 
 
@@ -26,12 +27,24 @@ class MyParkList extends Component {
     this.setState({parks: parksCopy})
   }
 
+  handleParkItemClick(index) {
+    console.log(this.state.parks[index].location)
+    const parksCopy = this.state.parks.slice()
+    parksCopy[index] = Object.assign({}, parksCopy[index])
+    parksCopy[index].showInfo = !parksCopy[index].showInfo
+    this.setState({parks: parksCopy})
+  }
+
   render() {
     return (
       <div className="MyParkList">
         <h3>My Park List</h3>
         <ul>
-          <MyParkListItem parks={this.state.parks} onHasVisitedChange={this.handleHasVisitedChange}/>
+          <MyParkListItem
+            parks={this.state.parks}
+            onHasVisitedChange={this.handleHasVisitedChange}
+            onParkItemClick={this.handleParkItemClick}
+          />
         </ul>
       </div>
     );

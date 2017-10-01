@@ -4,7 +4,7 @@ class MyParkListItem extends Component {
   // constructor(props) {
   //   super(props)
   //   this.state = {
-  //     hasVisited: true
+  //     location: false
   //   }
   // }
 
@@ -15,13 +15,23 @@ class MyParkListItem extends Component {
       <li key={index}>
         <input name={park.name} type="checkbox" checked={park.hasVisited}
           onChange={() => this.props.onHasVisitedChange(index)}/>
-        {park.name}
+        <a href="#" onClick={() => this.props.onParkItemClick(index)}>{park.name}</a>
+        {info(park)}
       </li>
     )
 
-    const parksList = this.props.parks.map((park, index) =>
-      parksItemsLayout(park, index)
-    )
+    const info = ((park) => {
+      if(!park.showInfo) {
+        return null
+      }
+      else {
+        return <p>Location: {park.location}</p>
+      }
+    })
+
+    const parksList = this.props.parks.map((park, index) => {
+      return parksItemsLayout(park, index)
+    })
 
     return (
       <div className="MyParkListItem">
