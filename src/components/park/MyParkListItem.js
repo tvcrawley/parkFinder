@@ -8,13 +8,19 @@ class MyParkListItem extends Component {
   //   }
   // }
 
+
+
   render() {
-    console.log(this.props)
-    const parksList = this.props.parks.map((park, index) =>
+    const parksItemsLayout = ((park, index) =>
       <li key={index}>
-        <input name={park.name} type="checkbox" checked={park.hasVisited} onChange={() => this.props.onHasVisitedChange(index)}/>
+        <input name={park.name} type="checkbox" checked={park.hasVisited}
+          onChange={() => this.props.onHasVisitedChange(index)}/>
         {park.name}
       </li>
+    )
+
+    const parksList = this.props.parks.map((park, index) =>
+      parksItemsLayout(park, index)
     )
 
     return (
