@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import MyParkList from '../park/MyParkList';
 
 class Body extends Component {
   render() {
     return (
       <div className="Body">
-        <div>Here's some content</div>
+        <MyParkList />
       </div>
     );
   }
