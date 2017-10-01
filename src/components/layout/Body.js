@@ -13,8 +13,16 @@ class Body extends Component {
       ],
       myParks: []
     }
+    this.handleParkClick = this.handleParkClick.bind(this)
     this.handleHasVisitedChange = this.handleHasVisitedChange.bind(this)
     this.handleParkItemClick = this.handleParkItemClick.bind(this)
+  }
+
+  handleParkClick (index) {
+    this.setState({
+      myParks: this.state.myParks.concat([this.state.parks[index]])
+    })
+    console.log(this.state.myParks)
   }
 
   handleHasVisitedChange(index) {
