@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 
 class MyParkListItem extends Component {
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     hasVisited: true
+  //   }
+  // }
+
   render() {
-    const parksList = this.props.parks.map((park) =>
-      <li key={park.name}>{park.name}</li>
+    console.log(this.props)
+    const parksList = this.props.parks.map((park, index) =>
+      <li key={index}>
+        <input name={park.name} type="checkbox" checked={park.hasVisited} onChange={() => this.props.onHasVisitedChange(index)}/>
+        {park.name}
+      </li>
     )
 
     return (
