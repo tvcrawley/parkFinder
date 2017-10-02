@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import MyParkListItem from './MyParkListItem';
 
 class MyParkList extends Component {
-  // constructor(props) {
-  //   super(props)
-  //
-  // }
-
   render() {
     return (
       <div className="MyParkList">

@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 
 class MyParkListItem extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     location: false
-  //   }
-  // }
-
-
-
-  render() {
+render() {
     const parksItemsLayout = ((park, index) =>
       <li key={index}>
         <input name={park.name} type="checkbox" checked={park.hasVisited}
@@ -23,7 +14,6 @@ class MyParkListItem extends Component {
 
     const info = ((park) => {
       if(!park.showInfo) {
-        console.log(park)
         return null
       }
       else {
