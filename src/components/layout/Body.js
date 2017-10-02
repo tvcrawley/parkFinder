@@ -36,7 +36,7 @@ class Body extends Component {
 
   componentWillMount() {
     const ref = firebase.database().ref("parks");
-    ref.on('value', function(snapshot){
+    ref.on('value', ((snapshot) => {
       // const parks = []
       // console.log(snapshot.val())
       const parks = snapshot.val()
@@ -46,17 +46,9 @@ class Body extends Component {
       this.setState({
         parks: parks
       });
-    }).bind(this)
-    console.log(this.state.parks)
-    // this.firebaseRef = firebase.database().ref("parks");
-    // console.log("firebaseRef: ", this.firebaseRef)
-    // this.firebaseRef.on("child_added", function(dataSnapshot) {
-    //   this.parks.push(dataSnapshot.val());
-    //   console.log("parks is: ", this.parks)
-      // this.setState({
-      //   parks: this.parks
-      // });
-    // }.bind(this));
+      console.log(this.state.parks)
+     })).bind(this)
+     console.log(this.state.parks)
   }
 
   handleParkClick(index) {
@@ -98,7 +90,9 @@ class Body extends Component {
 
     return (
       <div className="Body">
+        {this.state.parks.length === 0 ? (<p>Loading</p>) : (
         <ParkList parks={this.state.parks} onParkClick={this.handleParkClick}/>
+        )}
         <MyParkList
           myParks={this.state.myParks}
           onHasVisitedChange={this.handleHasVisitedChange}
