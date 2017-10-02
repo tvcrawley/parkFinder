@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 function Footer(props) {
   return (
     <div className="Footer">
-      <h5>Made by Toni Langley</h5>
+      <a href="http://tvlangley.github.io/"><h5>Made by Toni Langley</h5></a>
     </div>
   );
 }
