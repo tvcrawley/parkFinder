@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 function MyParkListItem(props) {
   const parksItemsLayout = ((park, index) =>
     <li key={index}>
-      <input name={park.name} type="checkbox" checked={park.hasVisited}
-        onChange={() => props.onHasVisitedChange(index)}/>
-      <a href="#" onClick={() => props.onParkItemClick(index)}>{park.name}</a>
-      <span onClick={() => props.onParkItemDelete(index)}>X</span>
+
+      <h4 onClick={() => props.onParkItemClick(index)}>{park.name}</h4>
       {info(park)}
+      <p>Visited?
+        <input name={park.name} type="checkbox" checked={park.hasVisited}
+          onChange={() => props.onHasVisitedChange(index)}/>
+      </p>
+      <button onClick={() => props.onParkItemDelete(index)}>Remove</button>
     </li>
   )
 
