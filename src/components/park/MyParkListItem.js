@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './MyParkListItem.css';
 
 function MyParkListItem(props) {
   const parksItemsLayout = ((park, index) =>

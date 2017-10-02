@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyParkListItem from './MyParkListItem';
+import './MyParkList.css';
 
 function MyParkList(props) {
   return (

@@ -1,0 +1,15 @@
+.MyParkListItem button {
+  background: #D8BFD8;
+  color: white;
+}
+
+.MyParkListItem button:hover, .MyParkListItem h4:hover, .MyParkListItem input:hover {
+  cursor: pointer;
+}
+
+.MyParkListItem li {
+  border-bottom: solid #D8BFD8;
+  list-style: none;
+  margin-right: 5%;
+  padding-bottom: 2%;
+}
