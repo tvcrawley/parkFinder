@@ -40,8 +40,9 @@ class Body extends Component {
   }
 
   handleParkClick(index) {
-    console.log(this.state.myParks.indexOf(this.state.myParks[index]))
-    if(this.state.myParks.indexOf(this.state.myParks[index]) === -1) {
+    // search through the myParks array
+    // find if the clicked park already exists in myParks
+    if(!this.state.myParks.includes(this.state.parks[index])) {
       this.setState({
         myParks: this.state.myParks.concat([this.state.parks[index]])
       })
