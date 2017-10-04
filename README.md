@@ -8,6 +8,21 @@ A park is made of up the following attributes:
 * hasVisited
 * showInfo
 
+#### Context
+
+Weekend crash course on React.js:
+- Saturday:
+  Half day learning session using:
+    - YouTube videos
+    - [ReactJS.org](https://reactjs.org/)
+
+- Sunday:
+  All day coding session consulting:
+    - ReactJS.org
+    - StackOverFlow
+    - Mozilla Developer Network
+    - [Firebase](https://firebase.google.com/docs/?gclid=EAIaIQobChMI1fKbx_DV1gIVDJRpCh2YbQtCEAAYASABEgKUYvD_BwE) + [ReactFire](https://github.com/firebase/reactfire) docs
+
 #### Technologies used
 
 * HTML
@@ -24,9 +39,5 @@ A park is made of up the following attributes:
 - Open in text editor of choice
 
 #### Improvements
-#### Future Features
 - Persist `myParks` data to Firebase API
 - Connect with third party API to access park data from around the U.S.
-
-#### Bugs
-- Adds multiple of the second or third park whenever the first park is not chosen
