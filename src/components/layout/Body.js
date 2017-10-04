@@ -43,8 +43,10 @@ class Body extends Component {
     // search through the myParks array
     // find if the clicked park already exists in myParks
     if(!this.state.myParks.includes(this.state.parks[index])) {
+      const myParksCopy = this.state.myParks.slice()
+      myParksCopy.push(this.state.parks[index])
       this.setState({
-        myParks: this.state.myParks.concat([this.state.parks[index]])
+        myParks: myParksCopy
       })
     }
   }
