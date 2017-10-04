@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ParkList from './ParkList';
 import MyParkList from './MyParkList';
 import * as firebase from 'firebase';
-import * as reactfire from 'reactfire';
+// import * as reactfire from 'reactfire';
 
 const config = {
   apiKey: "AIzaSyA428dlWWw9ExOTapCiN7jGAOlqPf4T-_s",
