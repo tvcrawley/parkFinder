@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ParkContainer from '../park/ParkContainer';
+import './Body.css';
 
 function Body(props) {
   return (
